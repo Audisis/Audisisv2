@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/10/src/Vistas/General
+END
+PnlAdmin.form
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/10/src/Vistas/General/PnlAdmin.form
+END
+GestorAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/7/src/Vistas/General/GestorAdmin.java
+END
+Modo.java
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/1/src/Vistas/General/Modo.java
+END
+IVistaAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/src/Vistas/General/IVistaAdmin.java
+END
+GestorABM.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/src/Vistas/General/GestorABM.java
+END
+IVistaABM.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1/src/Vistas/General/IVistaABM.java
+END
+PnlAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/10/src/Vistas/General/PnlAdmin.java
+END
+IVistaDomicilio.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/7/src/Vistas/General/IVistaDomicilio.java
+END

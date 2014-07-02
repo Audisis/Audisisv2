@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/7/src/Hibernate
+END
+GestorHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1/src/Hibernate/GestorHibernate.java
+END
+IPersistencia.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1/src/Hibernate/IPersistencia.java
+END
+HibernateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/7/src/Hibernate/HibernateUtil.java
+END

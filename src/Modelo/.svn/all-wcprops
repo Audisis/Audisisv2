@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/8/src/Modelo
+END
+TipoDocumento.java
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1/src/Modelo/TipoDocumento.java
+END
+Provincia.java
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/8/src/Modelo/Provincia.java
+END
+Profesional.java
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/1/src/Modelo/Profesional.java
+END
+Persona.java
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/7/src/Modelo/Persona.java
+END
+Localidad.java
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1/src/Modelo/Localidad.java
+END
+Sexo.java
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/7/src/Modelo/Sexo.java
+END
+TipoTelefono.java
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/1/src/Modelo/TipoTelefono.java
+END
+Familiar.java
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/1/src/Modelo/Familiar.java
+END
+Domicilio.java
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1/src/Modelo/Domicilio.java
+END
+Telefono.java
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/1/src/Modelo/Telefono.java
+END
+Paciente.java
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/1/src/Modelo/Paciente.java
+END

@@ -1,0 +1,40 @@
+10
+
+dir
+10
+https://audisis-v2.googlecode.com/svn/src
+https://audisis-v2.googlecode.com/svn
+
+
+
+2012-07-02T21:04:27.479521Z
+10
+nicogarcia16@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+7e511042-a30b-2ad5-06c7-71b2299ee9c4
+
+Hibernate
+dir
+
+Modelo
+dir
+
+Vistas
+dir
+
+audisisv2
+dir
+
