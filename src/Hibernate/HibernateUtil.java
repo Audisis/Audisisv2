@@ -17,7 +17,7 @@ public class HibernateUtil {
     public static Session session;
     public static void inicializar() {
         try {
-    //     sessionFactory = new AnnotationConfiguration().buildSessionFactory();
+      //  sessionFactory = new AnnotationConfiguration().buildSessionFactory();
          AnnotationConfiguration conf = new AnnotationConfiguration();
                 try{
                 conf.setProperty("hibernate.connection.driver_class","org.postgresql.Driver");
