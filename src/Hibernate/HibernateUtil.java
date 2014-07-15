@@ -17,8 +17,6 @@ public class HibernateUtil {
     public static Session session;
     public static void inicializar() {
         try {
-      //Cometario de Prueba
-            //comentario nico
       //  sessionFactory = new AnnotationConfiguration().buildSessionFactory();
          AnnotationConfiguration conf = new AnnotationConfiguration();
                 try{
