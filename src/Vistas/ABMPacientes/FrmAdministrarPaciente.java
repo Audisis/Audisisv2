@@ -30,7 +30,7 @@ public class FrmAdministrarPaciente extends javax.swing.JInternalFrame implement
     /** Creates new form FrmAdministrarPaciente */
     public FrmAdministrarPaciente() {
         initComponents();
-       gestor=new GestorAdminPaciente(this, new GestorPaciente(), new Paciente());
+  //     gestor=new GestorAdminPaciente(this, new GestorPaciente(), new Paciente());
     }
 
     /** This method is called from within the constructor to

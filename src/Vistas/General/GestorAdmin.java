@@ -17,9 +17,10 @@ public abstract class GestorAdmin {
     private PnlAdmin panelAdm;
     private Object objeto;
     
-    public GestorAdmin(IVistaAdmin vistaAdmin, IPersistencia persistencia,Object objeto) {
+    public GestorAdmin(IVistaAdmin vistaAdmin, IPersistencia persistencia, PnlAdmin panelAdm,Object objeto) {
         this.persistencia = persistencia;
         this.vistaAdmin = vistaAdmin;
+       this.panelAdm = panelAdm;
         this.objeto= objeto;
         inicializar();
     }

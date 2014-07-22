@@ -22,8 +22,8 @@ import org.jdesktop.swingx.table.TableColumnExt;
  */
 public class GestorAdminPaciente extends GestorAdmin{
 
-    public GestorAdminPaciente(IVistaAdmin vistaAdmin, IPersistencia persistencia,Object objeto) {
-        super(vistaAdmin, persistencia,objeto);
+    public GestorAdminPaciente(IVistaAdmin vistaAdmin, IPersistencia persistencia, PnlAdmin panelAdm,Object objeto) {
+        super(vistaAdmin, persistencia, panelAdm,objeto);
     }
 
  
@@ -48,7 +48,6 @@ public class GestorAdminPaciente extends GestorAdmin{
     @Override
     public FrmAdminPaciente getVistaAdmin(){
         return (FrmAdminPaciente)super.getVistaAdmin();
-       
     }
     
     @Override
@@ -65,7 +64,7 @@ public class GestorAdminPaciente extends GestorAdmin{
 
     @Override
     protected void modificarFila() {
-        JXTable tabla = getVistaAdmin().getTblAdmin();
+        JXTable tabla = getVistaAdmin().getPanelAdmin().getTblAdmin();
         DefaultTableModel modelo = (DefaultTableModel)tabla.getModel();
         String domicilio = getObjeto().getDomicilio().getCalle() + " " + getObjeto().getDomicilio().getNumeroCalle();
         modelo.setValueAt(getObjeto(), tabla.getSelectedRow(), 0);
