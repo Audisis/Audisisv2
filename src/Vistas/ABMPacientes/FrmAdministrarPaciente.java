@@ -11,6 +11,10 @@
 package Vistas.ABMPacientes;
 
 import Modelo.Gestores.GestorPaciente;
+import Modelo.Paciente;
+import Vistas.General.GestorAdmin;
+import Vistas.General.IVistaAdmin;
+import Vistas.General.PnlAdmin;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -20,13 +24,13 @@ import org.jdesktop.swingx.JXTable;
  *
  * @author Nico
  */
-public class FrmAdministrarPaciente extends javax.swing.JInternalFrame{
+public class FrmAdministrarPaciente extends javax.swing.JInternalFrame implements IVistaAdmin{
     private GestorAdminPaciente gestor;
     
     /** Creates new form FrmAdministrarPaciente */
     public FrmAdministrarPaciente() {
         initComponents();
-   //     gestor=new GestorADMINPaciente(this,new GestorPaciente());
+       gestor=new GestorAdminPaciente(this, new GestorPaciente(), new Paciente());
     }
 
     /** This method is called from within the constructor to
@@ -247,4 +251,8 @@ private void btnEditarPacienteActionPerformed(java.awt.event.ActionEvent evt) {/
         this.txtNumeroDocumento = txtNumeroDocumento;
     }
 
+    @Override
+    public void setGestor(GestorAdmin gestor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

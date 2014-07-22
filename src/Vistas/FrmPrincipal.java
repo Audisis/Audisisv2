@@ -10,7 +10,7 @@
  */
 package Vistas;
 
-import Vistas.ABMPacientes.FrmAdminPaciente;
+import Vistas.ABMPacientes.FrmAdministrarPaciente;
 import Vistas.ABMPacientes.FrmRegistrarEditarPaciente;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -146,7 +146,7 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     // End of variables declaration//GEN-END:variables
 
     private void openAdmPaciente() {
-        FrmAdminPaciente frmAdminPaciente=new FrmAdminPaciente();
+        FrmAdministrarPaciente frmAdminPaciente=new FrmAdministrarPaciente();
         escritorio.add(frmAdminPaciente);
         frmAdminPaciente.setVisible(true);
     }
