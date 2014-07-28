@@ -5,6 +5,8 @@
 package Vistas.General;
 
 import Hibernate.IPersistencia;
+import Modelo.Gestores.GestorUsuario;
+import Vistas.TipoVista;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -19,12 +21,16 @@ public abstract class GestorABM {
     private IVistaABM vistaABM;
     private GestorAdmin gestorAdmin;
     private Modo modo;
+    private TipoVista tipoVista;
+    private GestorUsuario gestorUsuario;
 
     public GestorABM(IVistaABM vistaABM, GestorAdmin gestorAdmin, IPersistencia persistencia,Object objeto) {
         this.setVistaABM(vistaABM);
         this.setPersistencia(persistencia);
         this.setObjeto(objeto);
         this.setGestorAdmin(gestorAdmin);
+        //this.gestorUsuario=;
+
     }
 
     public Object getObjeto() {
@@ -43,7 +49,14 @@ public abstract class GestorABM {
         this.persistencia = persistencia;
     }
 
+    public TipoVista getTipoVista() {
+        return tipoVista;
+    }
 
+    public void setTipoVista(TipoVista tipoVista) {
+        this.tipoVista = tipoVista;
+    }
+   
     public GestorAdmin getGestorAdmin() {
         return gestorAdmin;
     }

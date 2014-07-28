@@ -5,6 +5,8 @@
 package Vistas.General;
 
 import Hibernate.IPersistencia;
+import Modelo.Gestores.GestorUsuario;
+import Vistas.TipoVista;
 
 /**
  *
@@ -16,13 +18,17 @@ public abstract class GestorAdmin {
     private IVistaABM vistaABM;
     private PnlAdmin panelAdm;
     private Object objeto;
+    private TipoVista tipoVista;
+    private GestorUsuario gestorUsuario;
     
+        
     public GestorAdmin(IVistaAdmin vistaAdmin, IPersistencia persistencia, PnlAdmin panelAdm,Object objeto) {
-        this.persistencia = persistencia;
-        this.vistaAdmin = vistaAdmin;
+       this.persistencia = persistencia;
+       this.vistaAdmin = vistaAdmin;
        this.panelAdm = panelAdm;
-        this.objeto= objeto;
-        inicializar();
+       this.objeto= objeto;
+       //this.gestorUsuario=;
+       inicializar();
     }
 
     public IVistaAdmin getVistaAdmin() {
@@ -41,6 +47,14 @@ public abstract class GestorAdmin {
 
     public void setPersistencia(IPersistencia persistencia) {
         this.persistencia = persistencia;
+    }
+
+    public TipoVista getTipoVista() {
+        return tipoVista;
+    }
+
+    public void setTipoVista(TipoVista tipoVista) {
+        this.tipoVista = tipoVista;
     }
 
     public PnlAdmin getPanelAdm() {
