@@ -11,6 +11,7 @@ import Modelo.Paciente;
 import Vistas.General.GestorAdmin;
 import Vistas.General.IVistaAdmin;
 import Vistas.General.PnlAdmin;
+import Vistas.TipoVista;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import org.jdesktop.swingx.JXTable;
@@ -24,6 +25,8 @@ public class GestorAdminPaciente extends GestorAdmin{
 
     public GestorAdminPaciente(IVistaAdmin vistaAdmin, IPersistencia persistencia, PnlAdmin panelAdm,Object objeto) {
         super(vistaAdmin, persistencia, panelAdm,objeto);
+        this.setTipoVista(TipoVista.FrmAdminPaciente);
+
     }
 
  

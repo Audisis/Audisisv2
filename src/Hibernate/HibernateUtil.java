@@ -41,14 +41,19 @@ public class HibernateUtil {
                 conf.addAnnotatedClass(Modelo.Domicilio.class);
                 conf.addAnnotatedClass(Modelo.Familiar.class);
                 conf.addAnnotatedClass(Modelo.Localidad.class);               
-                conf.addAnnotatedClass(Modelo.Paciente.class);                
+                conf.addAnnotatedClass(Modelo.Paciente.class);
                 conf.addAnnotatedClass(Modelo.Persona.class);
+                conf.addAnnotatedClass(Modelo.Permiso.class);
                 conf.addAnnotatedClass(Modelo.Profesional.class);
                 conf.addAnnotatedClass(Modelo.Provincia.class); 
-                conf.addAnnotatedClass(Modelo.Sexo.class); 
+                conf.addAnnotatedClass(Modelo.Sesion.class); 
+                conf.addAnnotatedClass(Modelo.Sexo.class);               
                 conf.addAnnotatedClass(Modelo.Telefono.class);
                 conf.addAnnotatedClass(Modelo.TipoDocumento.class);
                 conf.addAnnotatedClass(Modelo.TipoTelefono.class);
+                conf.addAnnotatedClass(Modelo.TipoUsuario.class);
+                conf.addAnnotatedClass(Modelo.TipoTelefono.class);
+                conf.addAnnotatedClass(Modelo.Usuario.class);
             sessionFactory = conf.buildSessionFactory();
             session=sessionFactory.openSession();
 

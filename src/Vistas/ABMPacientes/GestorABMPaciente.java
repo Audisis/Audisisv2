@@ -19,6 +19,7 @@ import Vistas.ABMDomicilio.FrmDomicilio;
 import Vistas.General.GestorAdmin;
 import Vistas.General.IVistaABM;
 import Vistas.General.IVistaDomicilio;
+import Vistas.TipoVista;
 
 /**
  *
@@ -29,6 +30,7 @@ public class GestorABMPaciente extends GestorABM {
     
     public GestorABMPaciente(IVistaABM vistaABM, GestorAdmin gestorAdmin,IPersistencia persistencia,Object objeto,IVistaDomicilio vistaDomicilio) {
         super(vistaABM, gestorAdmin,persistencia,objeto);
+        this.setTipoVista(TipoVista.FrmRegistrarEditarPaciente);
         this.setVistaDomicilio(vistaDomicilio);     
     }
 
