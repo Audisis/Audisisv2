@@ -38,8 +38,13 @@ public class PnlAdmin extends javax.swing.JPanel {
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
+        jXCollapsiblePane1 = new org.jdesktop.swingx.JXCollapsiblePane();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAdmin = new org.jdesktop.swingx.JXTable();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setLayout(null);
 
@@ -72,6 +77,8 @@ public class PnlAdmin extends javax.swing.JPanel {
         });
         jXPanel1.add(btnEliminar);
         btnEliminar.setBounds(20, 90, 70, 25);
+        jXPanel1.add(jXCollapsiblePane1);
+        jXCollapsiblePane1.setBounds(100, 130, 0, 0);
 
         add(jXPanel1);
         jXPanel1.setBounds(580, 10, 110, 130);
@@ -88,6 +95,22 @@ public class PnlAdmin extends javax.swing.JPanel {
 
         add(jScrollPane1);
         jScrollPane1.setBounds(10, 10, 550, 240);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setLayout(null);
+
+        jButton1.setText("Buscar");
+        jPanel1.add(jButton1);
+        jButton1.setBounds(593, 7, 70, 25);
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(150, 10, 400, 20);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nombre", "Documento", "Teléfono" }));
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(10, 10, 130, 20);
+
+        add(jPanel1);
+        jPanel1.setBounds(10, 260, 680, 40);
     }// </editor-fold>//GEN-END:initComponents
 
 private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
@@ -106,7 +129,12 @@ private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnNuevo;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private org.jdesktop.swingx.JXCollapsiblePane jXCollapsiblePane1;
     private org.jdesktop.swingx.JXPanel jXPanel1;
     private org.jdesktop.swingx.JXTable tblAdmin;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@
 package audisisv2;
 
 import Hibernate.HibernateUtil;
+import Vistas.FrmInicioSesion;
 import Vistas.FrmPrincipal;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -36,9 +37,9 @@ public class AudisisV2 {
             Session s = HibernateUtil.getSession();
         }catch(Exception e){
         }
-        FrmPrincipal frmPrincipal=new FrmPrincipal();
-        frmPrincipal.setEnabled(true);
-        frmPrincipal.setVisible(true);
+        FrmInicioSesion frmInicioSesion=new FrmInicioSesion();
+        frmInicioSesion.setEnabled(true);
+        frmInicioSesion.setVisible(true);
     }
   }
 
