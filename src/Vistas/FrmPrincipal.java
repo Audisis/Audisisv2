@@ -27,6 +27,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize(); //Obtiene el tamaño de la pantalla.
         this.setSize((int) d.getWidth() , (int) d.getHeight()); //Establece el tanaño de la ventana (frame) a un tamaño que deseo, teniendo en cuenta a d, que es el tamaño de la ventana.
         this.setLocation(0,0); //Establece la ventana enm la esquina superior ixquierda.
+        this.setExtendedState(MAXIMIZED_BOTH);   
     }
 
     /** This method is called from within the constructor to
@@ -45,6 +46,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        escritorio.setBackground(new java.awt.Color(255, 255, 255));
 
         jMenu1.setText("Paciente");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {

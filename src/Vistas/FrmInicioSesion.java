@@ -4,6 +4,8 @@
  */
 package Vistas;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author Nico
@@ -15,6 +17,10 @@ public class FrmInicioSesion extends javax.swing.JFrame {
      */
     public FrmInicioSesion() {
         initComponents();
+        this.setSize(605,335);
+        PnlLogin fondo = new PnlLogin(); 
+        this.add(fondo,BorderLayout.CENTER);
+        //this.pack();
     }
 
     /**
@@ -35,6 +41,7 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Iniciar Sesion");
         getContentPane().setLayout(null);
         getContentPane().add(txtUsuario);
         txtUsuario.setBounds(10, 260, 150, 20);
@@ -49,6 +56,11 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         btnInicioSesion.setBounds(360, 258, 100, 23);
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCancelarMouseClicked(evt);
+            }
+        });
         getContentPane().add(btnCancelar);
         btnCancelar.setBounds(480, 258, 100, 23);
 
@@ -64,7 +76,7 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(10, 230, 570, 2);
 
-        setSize(new java.awt.Dimension(604, 330));
+        setSize(new java.awt.Dimension(604, 350));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -73,6 +85,10 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         FrmPrincipal frmPrincipal = new FrmPrincipal();
         frmPrincipal.setVisible(true);
     }//GEN-LAST:event_btnInicioSesionActionPerformed
+
+    private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelarMouseClicked
 
     /**
      * @param args the command line arguments
