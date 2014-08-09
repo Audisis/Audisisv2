@@ -30,7 +30,7 @@ public class GestorABMPaciente extends GestorABM {
     
     public GestorABMPaciente(IVistaABM vistaABM, GestorAdmin gestorAdmin,IPersistencia persistencia,Object objeto,IVistaDomicilio vistaDomicilio) {
         super(vistaABM, gestorAdmin,persistencia,objeto);
-        this.setTipoVista(TipoVista.FrmRegistrarEditarPaciente);
+        this.setTipoVista(TipoVista.ABMPaciente);
         this.setVistaDomicilio(vistaDomicilio);     
     }
 

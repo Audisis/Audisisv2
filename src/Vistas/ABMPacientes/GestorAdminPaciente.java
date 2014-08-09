@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -25,8 +25,7 @@ public class GestorAdminPaciente extends GestorAdmin{
 
     public GestorAdminPaciente(IVistaAdmin vistaAdmin, IPersistencia persistencia, PnlAdmin panelAdm,Object objeto) {
         super(vistaAdmin, persistencia, panelAdm,objeto);
-        this.setTipoVista(TipoVista.FrmAdminPaciente);
-
+        this.setTipoVista(TipoVista.ABMPaciente);
     }
 
  

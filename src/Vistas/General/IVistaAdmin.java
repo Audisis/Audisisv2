@@ -11,4 +11,5 @@ package Vistas.General;
 public interface IVistaAdmin {
     GestorAdmin getGestor();
     void setGestor(GestorAdmin gestor);
+    
 }
