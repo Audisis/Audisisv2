@@ -36,6 +36,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         this.setExtendedState(MAXIMIZED_BOTH); 
         GestorSeguridad.getInstance();
         GestorUsuario gestorUsuario=new GestorUsuario();
+        int alto = Toolkit.getDefaultToolkit().getScreenSize().height;
+        int ancho = Toolkit.getDefaultToolkit().getScreenSize().width;
+        escritorio.setSize(ancho,alto);
 //       Usuario usuario=new Usuario();
 //       usuario.setNombre("Administrador");
 //        GestorTipoUsuario gestorTipoUsuario=new GestorTipoUsuario();
@@ -67,7 +70,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         escritorio.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(escritorio);
-        escritorio.setBounds(226, 0, 500, 600);
+        escritorio.setBounds(0, 0, 780, 600);
 
         jMenu1.setText("Paciente");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
