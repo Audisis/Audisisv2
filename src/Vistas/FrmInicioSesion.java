@@ -4,6 +4,8 @@
  */
 package Vistas;
 
+import Modelo.Usuario;
+import Vistas.Permisos.GestorSeguridad;
 import java.awt.BorderLayout;
 
 /**
@@ -82,6 +84,7 @@ public class FrmInicioSesion extends javax.swing.JFrame {
 
     private void btnInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioSesionActionPerformed
         this.dispose();
+        GestorSeguridad.getInstance().setUsuario(new Usuario());
         FrmPrincipal frmPrincipal = new FrmPrincipal();
         frmPrincipal.setVisible(true);
     }//GEN-LAST:event_btnInicioSesionActionPerformed

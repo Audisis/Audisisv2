@@ -10,8 +10,14 @@
  */
 package Vistas;
 
+import Modelo.Gestores.GestorTipoUsuario;
+import Modelo.Gestores.GestorUsuario;
+import Modelo.TipoUsuario;
+import Modelo.Usuario;
 import Vistas.ABMPacientes.FrmAdministrarPaciente;
 import Vistas.ABMPacientes.FrmRegistrarEditarPaciente;
+import Vistas.General.GestorABM;
+import Vistas.Permisos.GestorSeguridad;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
@@ -27,7 +33,18 @@ public class FrmPrincipal extends javax.swing.JFrame {
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize(); //Obtiene el tamaño de la pantalla.
         this.setSize((int) d.getWidth() , (int) d.getHeight()); //Establece el tanaño de la ventana (frame) a un tamaño que deseo, teniendo en cuenta a d, que es el tamaño de la ventana.
         this.setLocation(0,0); //Establece la ventana enm la esquina superior ixquierda.
-        this.setExtendedState(MAXIMIZED_BOTH);   
+        this.setExtendedState(MAXIMIZED_BOTH); 
+        GestorSeguridad.getInstance();
+        GestorUsuario gestorUsuario=new GestorUsuario();
+//       Usuario usuario=new Usuario();
+//       usuario.setNombre("Administrador");
+//        GestorTipoUsuario gestorTipoUsuario=new GestorTipoUsuario();
+//        TipoUsuario tipoUsuario= new TipoUsuario();
+//        tipoUsuario.setNombre("Administrador");
+//        usuario.setTipoUsuario(tipoUsuario);
+//        gestorUsuario.guardarObjeto(usuario);
+        
+       
     }
 
     /** This method is called from within the constructor to

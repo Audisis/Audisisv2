@@ -8,7 +8,7 @@ public class Usuario {
     @Id@GeneratedValue(strategy=javax.persistence.GenerationType.AUTO)
     private int id;
     private String nombre;
-    private String contraseña;
+    private String contrasena;
     private transient Sesion sesionActual;
     @ManyToOne(targetEntity = TipoUsuario.class, cascade= CascadeType.ALL)
     private TipoUsuario tipoUsuario;
@@ -32,11 +32,11 @@ public class Usuario {
     }
 
     public String getContraseña() {
-        return contraseña;
+        return contrasena;
     }
 
     public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+        this.contrasena = contraseña;
     }
 
     public Sesion getSesionActual() {
