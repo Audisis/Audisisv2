@@ -4,9 +4,13 @@
  */
 package Vistas;
 
+import Modelo.Gestores.GestorUsuario;
 import Modelo.Usuario;
+import Vistas.Permisos.EstadoLogin;
 import Vistas.Permisos.GestorSeguridad;
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,6 +26,7 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         this.setSize(605,335);
         PnlLogin fondo = new PnlLogin(); 
         this.add(fondo,BorderLayout.CENTER);
+        GestorSeguridad.getInstance();
         //this.pack();
     }
 
@@ -85,8 +90,49 @@ public class FrmInicioSesion extends javax.swing.JFrame {
     private void btnInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioSesionActionPerformed
         this.dispose();
         GestorSeguridad.getInstance().setUsuario(new Usuario());
+        GestorUsuario gestorUsuario =new GestorUsuario();
         FrmPrincipal frmPrincipal = new FrmPrincipal();
         frmPrincipal.setVisible(true);
+         
+//        if(!this.txtUsuario.getText().isEmpty() && !String.copyValueOf(this.txtContraseña.getPassword()).isEmpty())
+//        {
+//            String msg = "";
+//            //login usuario
+//            EstadoLogin configUsuario = GestorSeguridad.getInstance().configUsuario(this.txtUsuario.getText(), String.copyValueOf(this.txtContraseña.getPassword()));
+//            if(configUsuario == EstadoLogin.NO_EXISTE)
+//            {
+//                msg = "El usuario: "+this.txtUsuario.getText()+" no existe.";
+//            }else if(configUsuario == EstadoLogin.ERROR_CLAVE)
+//            {
+//                msg = "Contraseña Incorrecta!";
+//            }else{
+//                int op = JOptionPane.showConfirmDialog(null, "Acceso Concedido.\n¿Desea cambiar la configuración actual?",
+//                                                                    "Bienvenido: "+this.txtUsuario.getText(),JOptionPane.YES_NO_OPTION);
+//                if(op == JOptionPane.OK_OPTION)
+//                {
+//                  /*  this.pnlLogin.setVisible(false);
+//                    this.dcFecha.setEnabled(true);
+//                    this.tftTipoCambio.setEditable(true);
+//                    this.cmbAlmacen.setEnabled(true);
+//                    this.cmbMoneda.setEnabled(true);
+//                    lblLogo.setText("JVENTAS");
+//                    this.setSize(pnlConfig.getWidth(), this.getHeight()+bntAceptar.getHeight());
+//                    this.setLocationRelativeTo(null);
+//                    this.bntAceptar.setVisible(true);
+//                    this.bntCancelarConfig.setVisible(true);
+//                */
+//                }else{
+//                    FrmPrincipal frmPrincipal = new FrmPrincipal();
+//                    frmPrincipal.setVisible(true);
+//                    this.dispose();
+//                 }
+//                return;
+//            }            
+//            JOptionPane.showMessageDialog(null, msg, "Error: no se pudo conectar.", JOptionPane.ERROR_MESSAGE);
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Ingrese un nombre de usuario y su contraseña", "Error: Datos vacios.", JOptionPane.ERROR_MESSAGE);
+//        }
+//        
     }//GEN-LAST:event_btnInicioSesionActionPerformed
 
     private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked

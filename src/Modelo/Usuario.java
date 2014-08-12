@@ -9,6 +9,7 @@ public class Usuario {
     private int id;
     private String nombre;
     private String contrasena;
+    private String salt;
     private transient Sesion sesionActual;
     @ManyToOne(targetEntity = TipoUsuario.class, cascade= CascadeType.ALL)
     private TipoUsuario tipoUsuario;
@@ -54,7 +55,7 @@ public class Usuario {
     public void setTipoUsuario(TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
-/*
+    /*
  * --Utilizar Persona o Empleado
  * 
     public Empleado getEmpleado() {
@@ -65,4 +66,20 @@ public class Usuario {
         this.empleado = empleado;
     }
     * */
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
 }

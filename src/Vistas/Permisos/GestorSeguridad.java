@@ -17,7 +17,6 @@ public class GestorSeguridad extends Object{
     private GestorUsuario gestorUsuario;
     private Usuario usuario;
    
-    
     public GestorSeguridad()
     { 
         gestorUsuario=new GestorUsuario();
@@ -41,6 +40,34 @@ public class GestorSeguridad extends Object{
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+    
+      public EstadoLogin configUsuario(String login,String clave)
+    {
+        if(getUsuario() == null)
+        {
+            return initUsuario(login,clave);
+        }else{
+            return EstadoLogin.ERROR;
+        }
+    }
+
+    private EstadoLogin initUsuario(String login,String clave)
+    {
+        usuario = new Usuario();        
+
+        if(usuario == null)
+        {
+            return EstadoLogin.NO_EXISTE;
+        }else{
+            
+            if(clave.equals(gestorUsuario.desencriptarPass()))
+            {   
+                return EstadoLogin.ACCESO_OK;
+            }else{
+                return EstadoLogin.ERROR_CLAVE;
+            }
+        }
     }
         
 
