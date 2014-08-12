@@ -17,6 +17,7 @@ import Modelo.Usuario;
 import Vistas.ABMPacientes.FrmAdministrarPaciente;
 import Vistas.ABMPacientes.FrmRegistrarEditarPaciente;
 import Vistas.ABMUsuario.FrmRegistrarUsuario;
+import Vistas.ABMUsuario.FrmTipoUsuario;
 import Vistas.General.GestorABM;
 import Vistas.Permisos.GestorSeguridad;
 import java.awt.BorderLayout;
@@ -66,6 +67,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -91,6 +93,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem3);
+
+        jMenuItem4.setText("Tipo Usuario");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
 
@@ -147,6 +157,10 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         openRegUsuario();// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        openRegTipoUsuario();        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -190,6 +204,7 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 
     private void openAdmPaciente() {
@@ -208,5 +223,11 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
         escritorio.add(frmRegistrarUsuario);
         frmRegistrarUsuario.setVisible(true);     
+    }
+    
+    private void openRegTipoUsuario() {
+        FrmTipoUsuario frmTipoUsuario = new FrmTipoUsuario();
+        escritorio.add(frmTipoUsuario);
+        frmTipoUsuario.setVisible(true);     
     }
 }
