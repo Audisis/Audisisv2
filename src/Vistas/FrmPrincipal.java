@@ -16,10 +16,13 @@ import Modelo.TipoUsuario;
 import Modelo.Usuario;
 import Vistas.ABMPacientes.FrmAdministrarPaciente;
 import Vistas.ABMPacientes.FrmRegistrarEditarPaciente;
+import Vistas.ABMUsuario.FrmRegistrarUsuario;
 import Vistas.General.GestorABM;
 import Vistas.Permisos.GestorSeguridad;
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.JPanel;
 
 /**
  *
@@ -61,6 +64,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         escritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -71,6 +76,23 @@ public class FrmPrincipal extends javax.swing.JFrame {
         escritorio.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(escritorio);
         escritorio.setBounds(0, 0, 780, 600);
+
+        jMenu2.setText("Archivo");
+
+        jMenuItem3.setText("Usuarios");
+        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem3MouseClicked(evt);
+            }
+        });
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu2);
 
         jMenu1.setText("Paciente");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +139,14 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     openRegPaciente();
 }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3MouseClicked
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        openRegUsuario();// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -155,9 +185,11 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 
     private void openAdmPaciente() {
@@ -170,5 +202,11 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         FrmRegistrarEditarPaciente frmRegistrarEditarPaciente=new FrmRegistrarEditarPaciente();
         escritorio.add(frmRegistrarEditarPaciente);
         frmRegistrarEditarPaciente.setVisible(true);
+    }
+
+    private void openRegUsuario() {
+        FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
+        escritorio.add(frmRegistrarUsuario);
+        frmRegistrarUsuario.setVisible(true);     
     }
 }

@@ -4,12 +4,17 @@
  */
 package Vistas.ABMUsuario;
 
+import Vistas.General.GestorABM;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Nico
  */
 public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
-
+ 
     /**
      * Creates new form FrmRegistrarUsuario
      */
@@ -27,7 +32,31 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        pnlDatosUsuario = new javax.swing.JPanel();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
+        txtUsuario = new javax.swing.JTextField();
+        txtMail = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtDomicilio = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstTipoUsuario = new javax.swing.JList();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        lstTipoUsuarioAplicado = new javax.swing.JList();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        btnAgregar = new javax.swing.JButton();
+        btnAgregarTodo = new javax.swing.JButton();
+        btnQuitar = new javax.swing.JButton();
+        btnQuitarTodo = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        pnlPermisosEspeciales = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -38,38 +67,186 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
         getContentPane().setLayout(null);
 
         jTabbedPane1.setToolTipText("Datos");
+        jTabbedPane1.setFocusable(false);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 617, Short.MAX_VALUE)
+        pnlDatosUsuario.setFocusable(false);
+        pnlDatosUsuario.setLayout(null);
+
+        txtNombre.setText(" ");
+        txtNombre.setFocusTraversalPolicyProvider(true);
+        pnlDatosUsuario.add(txtNombre);
+        txtNombre.setBounds(70, 20, 170, 20);
+
+        txtApellido.setText(" ");
+        txtApellido.setFocusTraversalPolicyProvider(true);
+        pnlDatosUsuario.add(txtApellido);
+        txtApellido.setBounds(70, 50, 170, 20);
+
+        txtUsuario.setText(" ");
+        txtUsuario.setFocusTraversalPolicyProvider(true);
+        pnlDatosUsuario.add(txtUsuario);
+        txtUsuario.setBounds(70, 80, 170, 20);
+
+        txtMail.setText(" ");
+        txtMail.setFocusTraversalPolicyProvider(true);
+        pnlDatosUsuario.add(txtMail);
+        txtMail.setBounds(70, 110, 170, 20);
+
+        txtTelefono.setFocusTraversalPolicyProvider(true);
+        pnlDatosUsuario.add(txtTelefono);
+        txtTelefono.setBounds(70, 140, 170, 20);
+
+        txtDomicilio.setFocusTraversalPolicyProvider(true);
+        pnlDatosUsuario.add(txtDomicilio);
+        txtDomicilio.setBounds(70, 170, 170, 20);
+
+        jLabel1.setText("Nombre");
+        jLabel1.setFocusable(false);
+        pnlDatosUsuario.add(jLabel1);
+        jLabel1.setBounds(10, 20, 55, 20);
+
+        jLabel2.setText("Apellido");
+        jLabel2.setFocusable(false);
+        pnlDatosUsuario.add(jLabel2);
+        jLabel2.setBounds(10, 50, 55, 20);
+
+        jLabel3.setText("Usuario");
+        jLabel3.setFocusable(false);
+        pnlDatosUsuario.add(jLabel3);
+        jLabel3.setBounds(10, 80, 55, 20);
+
+        jLabel4.setText("e-Mail");
+        jLabel4.setFocusable(false);
+        pnlDatosUsuario.add(jLabel4);
+        jLabel4.setBounds(10, 110, 55, 20);
+
+        jLabel5.setText("Teléfono");
+        jLabel5.setFocusable(false);
+        pnlDatosUsuario.add(jLabel5);
+        jLabel5.setBounds(10, 140, 50, 20);
+
+        lstTipoUsuario.setFocusable(false);
+        jScrollPane1.setViewportView(lstTipoUsuario);
+
+        pnlDatosUsuario.add(jScrollPane1);
+        jScrollPane1.setBounds(290, 30, 120, 180);
+
+        lstTipoUsuarioAplicado.setFocusable(false);
+        jScrollPane2.setViewportView(lstTipoUsuarioAplicado);
+
+        pnlDatosUsuario.add(jScrollPane2);
+        jScrollPane2.setBounds(480, 30, 120, 180);
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        pnlDatosUsuario.add(jSeparator1);
+        jSeparator1.setBounds(270, 10, 10, 210);
+
+        jLabel6.setText("Permisos Disponibles");
+        jLabel6.setFocusable(false);
+        pnlDatosUsuario.add(jLabel6);
+        jLabel6.setBounds(290, 10, 120, 20);
+
+        jLabel7.setText("Permisos Aplicados");
+        jLabel7.setFocusable(false);
+        pnlDatosUsuario.add(jLabel7);
+        jLabel7.setBounds(480, 10, 120, 20);
+
+        btnAgregar.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        btnAgregar.setText(">");
+        btnAgregar.setFocusable(false);
+        pnlDatosUsuario.add(btnAgregar);
+        btnAgregar.setBounds(420, 40, 50, 25);
+
+        btnAgregarTodo.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        btnAgregarTodo.setText(">>");
+        btnAgregarTodo.setFocusable(false);
+        pnlDatosUsuario.add(btnAgregarTodo);
+        btnAgregarTodo.setBounds(420, 70, 50, 25);
+
+        btnQuitar.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        btnQuitar.setText("<");
+        btnQuitar.setFocusable(false);
+        pnlDatosUsuario.add(btnQuitar);
+        btnQuitar.setBounds(420, 100, 50, 25);
+
+        btnQuitarTodo.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        btnQuitarTodo.setText("<<");
+        btnQuitarTodo.setFocusable(false);
+        pnlDatosUsuario.add(btnQuitarTodo);
+        btnQuitarTodo.setBounds(420, 130, 50, 25);
+
+        jLabel8.setText("Domicilio");
+        jLabel8.setFocusable(false);
+        pnlDatosUsuario.add(jLabel8);
+        jLabel8.setBounds(10, 170, 60, 20);
+
+        jTabbedPane1.addTab("Datos Personales", pnlDatosUsuario);
+
+        javax.swing.GroupLayout pnlPermisosEspecialesLayout = new javax.swing.GroupLayout(pnlPermisosEspeciales);
+        pnlPermisosEspeciales.setLayout(pnlPermisosEspecialesLayout);
+        pnlPermisosEspecialesLayout.setHorizontalGroup(
+            pnlPermisosEspecialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 615, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 252, Short.MAX_VALUE)
+        pnlPermisosEspecialesLayout.setVerticalGroup(
+            pnlPermisosEspecialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 232, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Datos", jPanel1);
+        jTabbedPane1.addTab("Permisos Especiales", pnlPermisosEspeciales);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(10, 12, 622, 280);
+        jTabbedPane1.setBounds(10, 10, 620, 260);
         jTabbedPane1.getAccessibleContext().setAccessibleName("Datos");
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Guardar");
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 310, 73, 23);
+        jButton1.setBounds(460, 280, 80, 23);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(540, 310, 73, 23);
+        jButton2.setBounds(550, 280, 80, 23);
 
-        setBounds(0, 0, 658, 378);
+        setBounds(0, 0, 660, 347);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnAgregarTodo;
+    private javax.swing.JButton btnQuitar;
+    private javax.swing.JButton btnQuitarTodo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JList lstTipoUsuario;
+    private javax.swing.JList lstTipoUsuarioAplicado;
+    private javax.swing.JPanel pnlDatosUsuario;
+    private javax.swing.JPanel pnlPermisosEspeciales;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtDomicilio;
+    private javax.swing.JTextField txtMail;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

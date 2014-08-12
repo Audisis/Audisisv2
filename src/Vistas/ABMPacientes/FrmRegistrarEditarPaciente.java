@@ -215,7 +215,7 @@ public class FrmRegistrarEditarPaciente extends javax.swing.JInternalFrame imple
         jTabbedPane1.addTab("Familiares", jPanel3);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(10, 10, 620, 250);
+        jTabbedPane1.setBounds(10, 10, 620, 260);
 
         btnGuardar.setText("Guardar");
         getContentPane().add(btnGuardar);
