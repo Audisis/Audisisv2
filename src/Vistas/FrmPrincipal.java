@@ -16,7 +16,7 @@ import Modelo.TipoUsuario;
 import Modelo.Usuario;
 import Vistas.ABMPacientes.FrmAdministrarPaciente;
 import Vistas.ABMPacientes.FrmRegistrarEditarPaciente;
-import Vistas.ABMUsuario.FrmRegistrarUsuario;
+import Vistas.ABMUsuario.FrmRegistrarEditarUsuario;
 import Vistas.ABMUsuario.FrmTipoUsuario;
 import Vistas.General.GestorABM;
 import Vistas.Permisos.GestorSeguridad;
@@ -220,7 +220,7 @@ private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     }
 
     private void openRegUsuario() {
-        FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
+        FrmRegistrarEditarUsuario frmRegistrarUsuario = new FrmRegistrarEditarUsuario();
         escritorio.add(frmRegistrarUsuario);
         frmRegistrarUsuario.setVisible(true);     
     }

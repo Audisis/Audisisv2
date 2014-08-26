@@ -4,24 +4,37 @@
  */
 package Vistas.ABMUsuario;
 
+import Hibernate.IPersistencia;
+import Modelo.Gestores.GestorUsuario;
+import Modelo.Usuario;
 import Vistas.General.GestorABM;
+import Vistas.General.IVistaABM;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  *
  * @author Nico
  */
-public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
- 
+public class FrmRegistrarEditarUsuario extends javax.swing.JInternalFrame implements IVistaABM{
+     private GestorABM gestorAbm;
+
     /**
      * Creates new form FrmRegistrarUsuario
      */
-    public FrmRegistrarUsuario() {
+    public FrmRegistrarEditarUsuario() {
         initComponents();
+        gestorAbm=new GestorABMUsuario(this,null,new GestorUsuario(),new Usuario (),null );
+        gestorAbm.inicializar();
     }
-
+    
+    public FrmRegistrarEditarUsuario(GestorAdminUsuario gestorAdmin,IPersistencia persistencia,Object objeto) {
+        initComponents();
+        gestorAbm=new GestorABMUsuario(this, gestorAdmin, persistencia, objeto,null);
+        gestorAbm.inicializar();
+   }        
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -249,4 +262,57 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtTelefono;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
+    
+    @Override
+    public GestorABM getGestor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setGestor(GestorABM gestor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JTextField getApellido() {
+        return txtApellido;
+    }
+
+    public void setApellido(JTextField txtApellido) {
+        this.txtApellido = txtApellido;
+    }
+
+    public JTextField getEMail() {
+        return txtMail;
+    }
+
+    public void setEMail(JTextField txtMail) {
+        this.txtMail = txtMail;
+    }
+
+    public JTextField getNombre() {
+        return txtNombre;
+    }
+
+    public void setNombre(JTextField txtNombre) {
+        this.txtNombre = txtNombre;
+    }
+
+    public JTextField getNombreUsuario() {
+        return txtUsuario;
+    }
+
+    public void setNombreUsuario(JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
+
+    public JTextField getTelefono() {
+        return txtTelefono;
+    }
+
+    public void setTelefono(JTextField txtTelefono) {
+        this.txtTelefono = txtTelefono;
+    }
+    
+    
 }

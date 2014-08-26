@@ -2,5 +2,7 @@ package Vistas;
 
 public enum TipoVista {
     ABMPaciente,
-    ABMProfesional
+    ABMProfesional, 
+    ABMUsuario,
+    ABMCondicionIVA
 }

@@ -8,11 +8,17 @@ public class Usuario {
     @Id@GeneratedValue(strategy=javax.persistence.GenerationType.AUTO)
     private int id;
     private String nombre;
+    private String apellido;
+    private String nombreUsuario;
     private String contrasena;
+    private String eMail;
+    private String Telefono;
     private String salt;
     private transient Sesion sesionActual;
     @ManyToOne(targetEntity = TipoUsuario.class, cascade= CascadeType.ALL)
     private TipoUsuario tipoUsuario;
+    @ManyToOne(targetEntity = Domicilio.class, cascade= CascadeType.ALL)
+    private Domicilio domicilio;
     //private Empleado empleado;
 
     
@@ -81,5 +87,45 @@ public class Usuario {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+    public String getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
+    }
+
+    public Domicilio getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(Domicilio domicilio) {
+        this.domicilio = domicilio;
     }
 }

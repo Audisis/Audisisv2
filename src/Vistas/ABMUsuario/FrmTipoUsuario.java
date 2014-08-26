@@ -4,8 +4,8 @@
  */
 package Vistas.ABMUsuario;
 
-import Modelo.CellEditor;
-import Modelo.CellRender;
+import Vistas.General.CellEditor;
+import Vistas.General.CellRender;
 import javax.swing.table.DefaultTableModel;
 
 /**
